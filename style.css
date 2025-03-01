@@ -77,7 +77,7 @@ button:hover {
 
 /* Custom Modal Styling */
 .modal {
-    display: none; /* Ensures modal is hidden initially */
+    display: none; /* Hidden by default */
     position: fixed;
     top: 0;
     left: 0;
@@ -90,7 +90,6 @@ button:hover {
     z-index: 1000;
 }
 
-/* Ensure modal is properly centered */
 .modal-content {
     background: white;
     padding: 20px;
@@ -100,6 +99,7 @@ button:hover {
     max-width: 400px;
     width: 80%;
 }
+
 
 
 /* Button inside Modal */

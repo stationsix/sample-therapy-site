@@ -1,10 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Check if we are on the contact page
+    if (!document.querySelector("form")) {
+        console.log("Not on contact page. Script will not run.");
+        return;
+    }
+
     const form = document.querySelector("form");
     const modal = document.getElementById("customModal");
     const modalMessage = document.getElementById("modalMessage");
-
-    // Prevent errors on pages without a form
-    if (!form) return;  
+    const closeModalBtn = document.getElementById("closeModalBtn");
 
     form.addEventListener("submit", function (event) {
         event.preventDefault(); // Stop actual submission
@@ -13,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const email = document.getElementById("email").value.trim();
         const message = document.getElementById("message").value.trim();
 
-        // Check if all fields are filled
         if (name && email && message) {
             modalMessage.innerText = `Thank you, ${name}! Your message has been received.`;
             modal.style.display = "flex"; 
@@ -23,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Close modal when clicking OK
-    document.getElementById("closeModalBtn").addEventListener("click", function () {
+    closeModalBtn.addEventListener("click", function () {
         modal.style.display = "none";
     });
 });
