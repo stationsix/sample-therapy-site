@@ -3,10 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Webpage</title>
+    <title>Therapist Sample Site</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to My Sample Therapy Site</h1>
-    <p>This is a simple website to test GitHub Pages deployment.</p>
+    <header>
+        <h1>Welcome to [Therapist Name]’s Practice</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <img src="/images/therapist.jpg" alt="A cozy and welcoming therapist's office">
+        <p>Providing compassionate, professional therapy services in a safe environment.</p>
+    </section>
+
+    <!-- Custom Modal -->
+    <div id="customModal" class="modal">
+        <div class="modal-content">
+            <p id="modalMessage"></p>
+            <button onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+    <!-- Include JavaScript -->
+    <script src="js/script.js"></script>
 </body>
 </html>
