@@ -9,13 +9,8 @@
 <body>
     <header>
         <h1>About [Therapist Name]</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div id="nav-placeholder">
+        </div>
     </header>
 
     <section>
@@ -23,5 +18,12 @@
         <p>[Therapist Name] is a licensed therapist specializing in EMDR, CBT, and mindfulness-based therapy.</p>
         <p>With over [X] years of experience, [Therapist Name] is dedicated to helping clients overcome anxiety, trauma, and personal challenges.</p>
     </section>
-</body>
+    <script>
+        fetch("nav.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("nav-placeholder").innerHTML = data;
+            });
+    </script>
+    </body>
 </html>

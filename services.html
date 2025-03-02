@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Therapist Sample Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Our Therapy Services</h1>
+        <div id="nav-placeholder">
+        </div>
+    </header>
+
+    <section>
+        <h2>Therapy Services We Offer</h2>
+        <ul>
+            <li>✅ Individual Therapy</li>
+            <li>✅ Couples Counseling</li>
+            <li>✅ Family Therapy</li>
+            <li>✅ Anxiety & Depression Support</li>
+            <li>✅ Trauma & PTSD Counseling</li>
+            <li>✅ Stress Management</li>
+        </ul>
+        <p>Interested in scheduling a session?</p>
+        <a href="contact.html" class="cta-button">Book an Appointment</a>
+    </section>
+    <script>
+        fetch("nav.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("nav-placeholder").innerHTML = data;
+            });
+    </script>
+    
+</body>
+</html>

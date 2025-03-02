@@ -9,13 +9,8 @@
 <body>
     <header>
         <h1>Contact [Therapist Name]</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+            <div id="nav-placeholder">
+            </div>
     </header>
 
     <section>
@@ -37,17 +32,23 @@
         </form>
     </section>
 
-<!-- Custom Modal -->
-<div id="customModal" class="modal">
-    <div class="modal-content">
-      <p id="modalMessage"></p>
-      <button id="closeModalBtn">OK</button>
+    <!-- Custom Modal -->
+    <div id="customModal" class="modal">
+        <div class="modal-content">
+            <p id="modalMessage"></p>
+            <button id="closeModalBtn">OK</button>
+        </div>
     </div>
-</div>
 
-
-    <!-- Move script tag to the end -->
+    <!-- JavaScript at the END to ensure proper loading -->
     <script src="js/script.js"></script>
-
+    <script>
+        fetch("nav.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("nav-placeholder").innerHTML = data;
+            });
+    </script>
+    
 </body>
 </html>
